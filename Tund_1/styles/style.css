@@ -1,28 +1,30 @@
 body {
-    background-color: LightSkyBlue;
-    color: #AA0000;
-    font-family:fantasy;
-    background-image: url(../../../../~rinde/media/pics/tlu_h200.png);
+    background-color: rgb(250, 191, 191);
+    color:#000000;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(../../../../~anassel/veeb_ja_meedia/Materials/unnamed.jpg);
     background-repeat: no-repeat;
-    background-position: 1300px 300px;
+    background-position: 970px 270px;
     background-attachment: fixed;
 
 }
 
+
 h1, h2, h3 {
-    color: rgb(0,0,180);
+    color: rgb(58, 54, 54);
 }
 
 section {
-    background-color: rgba(255,255,255,.5); 
-    background-image:url(../../../../~rinde/media/pics/top_left_01_transparent.png),url(../../../../~rinde/media/pics/bottom_right_01_transparent.png);;
+    background-color: rgba(247, 158, 158, 0.712); 
+    background-image:url(../../../../~anassel/veeb_ja_meedia/Materials/top_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/top_right.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_right.png);
     background-repeat: no-repeat;
-    background-position: left top, bottom right;
-    background-size: 50px;
+    background-position:  left top, right top, bottom left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 95px;
 }
 
 nav {
-    background-color: hsl(240, 80%, 90%);
+    background-color: hsla(0, 64%, 79%, 0.726);
 }
 
 

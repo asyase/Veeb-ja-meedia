@@ -1,0 +1,98 @@
+body {
+    background-color: rgb(250, 191, 191);
+    color:#000000;
+    font-family:Arial, Helvetica, sans-serif;
+    background-image: url(../../../../~anassel/veeb_ja_meedia/Materials/unnamed.jpg);
+    background-repeat: no-repeat;
+    background-position: 970px 270px;
+    background-attachment: fixed;
+    margin: 0px;
+
+}
+
+
+h1, h2, h3 {
+    color: rgb(58, 54, 54);
+}
+
+section {
+    background-color: rgba(247, 158, 158, 0.712); 
+    background-image:url(../../../../~anassel/veeb_ja_meedia/Materials/top_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/top_right.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_right.png);
+    background-repeat: no-repeat;
+    background-position:  left top, right top, bottom left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 90px;
+    background-origin: border-box; /*border-box padding-box content - box*/
+    /*background-clip:*/
+    width: 80%;
+    margin: 10px;
+    padding: 10px 20px; /*1 vaartus koigile 2 vaartus: vertikaal horisontaal. 3 vaartust uleval horisontaal all. 4 vaartust uleval paremal all vasakul */
+    border: 5px dotted white;
+    min-height: 400px;
+    max-height: 800x;
+    overflow:auto; /*visible hidden scroll*//* overflow-x overflow-y*/
+}
+main{
+    margin:10px;
+}
+
+nav {
+    background-color: hsla(0, 64%, 79%, 0.726);
+    box-sizing: border-box; /*contnet-box*/
+    width: 400px;
+    margin: 10px;
+    padding: 10x;
+    border-style: solid;
+    border-width:5 px;
+    border-color: white ;
+}
+
+#stage {
+    width: 900px;
+    height: 600px;
+    background-color: whitesmoke;
+    position:relative; /*static absolute fixed*/
+    left: 0px; /*right*/
+    top: 0px; /*bottom*/
+    margin-bottom: 50px;
+
+}
+
+#stage * {
+    position: absolute;
+
+}
+
+#windmill {
+    width: 308px;
+    height: 360px;
+    left: 500px;
+    transform: scale(.5);
+    /*border: 1px solid black;*/
+}
+
+#wm_body{
+    bottom: 0px;
+}
+
+div {
+    width: 600px;
+    height: 400px;
+    background-color: whitesmoke;
+    position:relative; /*static absolute fixed*/
+    left: 0px; /*right*/
+    top: 0px; /*bottom*/
+    margin-bottom: 50px;
+}
+
+footer {
+    width: 100%;
+    height: 50px;
+    background-color: whitesmoke;
+    position:fixed;
+    bottom: 0px;
+}
+
+
+
+
