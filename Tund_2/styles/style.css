@@ -1,97 +1,155 @@
-body {
-    background-color: rgb(250, 191, 191);
-    color:#000000;
-    font-family:Arial, Helvetica, sans-serif;
-    background-image: url(../../../../~anassel/veeb_ja_meedia/Materials/unnamed.jpg);
-    background-repeat: no-repeat;
-    background-position: 970px 270px;
-    background-attachment: fixed;
-    margin: 0px;
-
+body{
+	background-color: rgb(250, 191, 191);
+	color: #000000;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image: url(../../../../~anassel/veeb_ja_meedia/Materials/unnamed.jpg);
+	background-repeat: no-repeat;
+	background-position: 1080px 200px;
+	background-attachment: fixed;
+	margin: 0px;
 }
 
-
-h1, h2, h3 {
-    color: rgb(58, 54, 54);
+main{
+	margin: 10px;
 }
 
-section {
+h1,h2,h3{
+	color:  rgb(58, 54, 54);
+}
+
+section{
     background-color: rgba(247, 158, 158, 0.712); 
     background-image:url(../../../../~anassel/veeb_ja_meedia/Materials/top_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/top_right.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_right.png);
     background-repeat: no-repeat;
-    background-position:  left top, right top, bottom left, bottom right;
+    background-position: top left, top right, bottom left, bottom right;
     background-repeat: no-repeat;
-    background-size: 90px;
-    background-origin: border-box; /*border-box padding-box content - box*/
+    background-size: 50px;
+    background-origin: padding-box; /*border-box padding-box content - box*/
     /*background-clip:*/
-    width: 80%;
-    margin: 10px;
-    padding: 10px 20px; /*1 vaartus koigile 2 vaartus: vertikaal horisontaal. 3 vaartust uleval horisontaal all. 4 vaartust uleval paremal all vasakul */
+    width: 65%;
+    margin: 25px;
+    padding:10px 20px; /*1 vaartus koigile 2 vaartus: vertikaal horisontaal. 3 vaartust uleval horisontaal all. 4 vaartust uleval paremal all vasakul */
     border: 5px dotted white;
-    min-height: 400px;
-    max-height: 800x;
+    min-height: 200px;
+    max-height: 500px;
     overflow:auto; /*visible hidden scroll*//* overflow-x overflow-y*/
 }
-main{
-    margin:10px;
+#animatsioon{
+	margin-bottom: 70px;
 }
 
-nav {
+nav{
     background-color: hsla(0, 64%, 79%, 0.726);
     box-sizing: border-box; /*contnet-box*/
-    width: 400px;
+    width: 800px;
     margin: 10px;
-    padding: 10x;
+    padding: 5px;
     border-style: solid;
-    border-width:5 px;
-    border-color: white ;
+    border-width: 3px;
+    border-color: white;
 }
 
-#stage {
+a{
+	color: #000000;
+}
+
+#stage{
     width: 900px;
     height: 600px;
-    background-color: whitesmoke;
-    position:relative; /*static absolute fixed*/
-    left: 0px; /*right*/
-    top: 0px; /*bottom*/
-    margin-bottom: 50px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    background-image: url(../..//Materials/Brorfelde_landscape_2_maa_osa_veerand.png), url(../../Materials/Brorfelde_landscape_2_taeva_osa_veerand.png);
+    background-repeat: no-repeat;
+    background-size: 700px;
+    margin-bottom: 85px;
 
 }
-
-#stage * {
-    position: absolute;
-
+#stage *{
+	position: absolute;
 }
-
 #windmill {
     width: 308px;
     height: 360px;
-    left: 500px;
-    transform: scale(.5);
-    /*border: 1px solid black;*/
+    /* border: 1px solid teal; */
+    top: -55px;
+    left: 405px;
+    transform: scale(.3);
 }
-
 #wm_body{
-    bottom: 0px;
+	bottom: 0px;
+}
+#sun {
+    width: 330px;
+    height: 360px;
+    top: -100px;
+    left: -95px;
+    transform: scale(.4);
+}
+#truck {
+    top: 230px;
+    left: 30px;
+    transform: scale(.1);
+}
+#truck_body{
+	bottom: -100px;
+	left: -85px;
+}
+#wheel2{
+	bottom: -140px;
+	left: 720px;
 }
 
-div {
-    width: 600px;
-    height: 400px;
-    background-color: whitesmoke;
-    position:relative; /*static absolute fixed*/
-    left: 0px; /*right*/
-    top: 0px; /*bottom*/
-    margin-bottom: 50px;
+#helicopter {
+    left: 3250px;
+    top:-1500px;
+    transform: scale(1.5);
 }
 
-footer {
-    width: 100%;
-    height: 50px;
-    background-color: whitesmoke;
-    position:fixed;
+#helicopter_body {
     bottom: 0px;
+
 }
+
+#rotor{
+    top:-175px;
+    bottom: -130px;
+	left: -38px;
+
+}
+
+#back_rotor{
+    top: -165px;
+	left: 340px;
+    
+
+}
+
+footer{
+	width: 100%;
+	height: 50px;
+	background-color: white;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+}
+
+
+
+
+
+
+
+/*margin – определяет внешние отступы.
+margin:0 auto – определяет центрирование блока по горизонтали.
+padding – определяет поля внутри блока.
+border – определяет свойства границ.
+width – определяет ширину в пикселях или в процентах.
+height – определяет высоту.
+color – определяет цвет текста.
+Что касается механизма позиционирования, то его можно описать так: верхний левый угол блока является началом воображаемой системы координат (0). Верхняя и левая границы соответственно оси x и y. 
+100 пикселей по горизонтали 
+и 100 пикселей по вертикали определяют координату верхнего левого угла изображения-фона.*/
 
 
 
