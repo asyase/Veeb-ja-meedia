@@ -30,8 +30,8 @@ section{
     margin: 25px;
     padding:10px 20px; /*1 vaartus koigile 2 vaartus: vertikaal horisontaal. 3 vaartust uleval horisontaal all. 4 vaartust uleval paremal all vasakul */
     border: 5px dotted white;
-    min-height: 200px;
-    max-height: 500px;
+    min-height: 400px;
+    max-height: 800px;
     overflow:auto; /*visible hidden scroll*//* overflow-x overflow-y*/
 }
 #animatsioon{
