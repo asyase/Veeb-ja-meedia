@@ -67,6 +67,62 @@ a{
     transform: scale(1);
 }
 
+.animated_clock {
+    overflow: hidden;
+}
+
+.clockArea {
+    margin: auto;
+	width: 272px;
+    height: 473px;
+}
+
+.clock {
+	position: relative;
+	width: 554px;
+	height: 945px;
+	transform-origin: 0% 0%;
+    transform: scale(.5);
+}
+
+.clock * {
+	position: absolute;
+}
+
+.clockface {
+	width: 369px;
+	height: 369px;
+	left: 92px;
+	top: 90px;
+}
+
+.clockhand {
+	left: 158px;
+	top: 10px;
+	transform-origin: 50% 176px;
+}
+
+.clockhour {
+    animation: kellaseier 100s linear infinite;
+}
+
+.clockmin {
+    animation: kellaseier 50s linear infinite;
+}
+
+.clocksec {
+    animation: kellaseier 8s linear infinite;
+}
+
+.pendulus {
+	left: 194px;
+    top: 400px;
+    transform-origin: 50% 0%;
+    animation: pendulumswing 1s ease-in-out infinite;
+    animation-direction: alternate;
+    transform: scale(10);
+    top: 325px;
+}
 .stage{
 	width: 1188px;
 	height: 600px;
@@ -156,57 +212,6 @@ a{
     left: -38px;
 
 }
-
-#tik_tak{
-	margin-bottom: 70px;
-}
-.clock_area {
-	width: 272px;
-	height: 473px;
-	padding: 10px
-}
-
-.clock {
-	position: relative;
-	width: 554px;
-	height: 945px;
-	transform-origin: 0% 0%;
-	transform: scale(.5);
-}
-
-.clock * {
-	position: absolute;
-}
-
-.clockface {
-	width: 369px;
-	height: 369px;
-	left: 92px;
-	top: 90px;
-}
-
-.clockhand {
-	left: 158px;
-	top: 10px;
-	transform-origin: 50% 176px;
-}
-
-.pendulus {
-	left: 194px;
-	top: 400px;
-	animation: tik_tak 10s infinite;
-}
-
-#hourhand{
-	animation: spin 86400s linear infinite;
-}
-#minutehand{
-	animation: spin 3600s linear infinite;
-}
-#secondhand{
-	animation: spin 60s linear infinite;
-}
-
 .ruut {
     width: 50px;
     height: 50px;
@@ -263,9 +268,14 @@ footer{
     100% {transform: rotate(360deg);}
 }
 
-@keyframes pendulumswing {
+/*@keyframes pendulumswing {
     0%, 100% {transform: rotate(25deg);}
     50% {transform: rotate(-25deg);}
+}*/
+
+@keyframes pendulumswing {
+    0% {transform: rotate(-30deg);}
+    100% {transform: rotate(30deg);}
 }
 
 @keyframes ruuduliikumine {

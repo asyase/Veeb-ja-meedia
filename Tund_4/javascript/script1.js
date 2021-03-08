@@ -11,6 +11,7 @@ window.onload = function(){
     console.log("Sõnum on: " + message);
     putOpenTime();
     putRandomPic();
+clockTick();
 }
 
 function putOpenTime(){
@@ -26,3 +27,17 @@ function putRandomPic(){
     document.getElementById("tlu_pic").src = picurl + picnameprefix + randomnum + picext;
 }
 
+function clockTick() {
+    let currentTime = new Date();
+    let currentHour = currentTime.getHours();
+    let currentMinute = currentTime.getMinutes();
+    let currentSecond = currentTime.getSeconds();
+    let secAngle = currentSecond * 6;
+    let minAngle = currentMinute * 6 + (secAngle / 60);
+    let hourAngle = currentHour * 30 + ((currentMinute * 6) / 12);
+    document.getElementById("secondhand").style.transform = "rotate(" + secAngle + "deg)";
+    document.getElementById("minutehand").style.transform = "rotate(" + minAngle + "deg)";
+    document.getElementById("hourhand").style.transform = "rotate(" + hourAngle + "deg)";
+    // setTimeout(1000,clockTick);
+    requestAnimationFrame(clockTick);
+}
