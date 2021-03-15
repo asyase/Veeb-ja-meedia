@@ -17,7 +17,7 @@ h1,h2,h3{
 	color: rgb(58, 54, 54);
 }
 section{
-	background-color:  rgba(247, 158, 158, 0.712); 
+	background-color:  rgba(247, 158, 158, 0.712);
 	background-image: url(../../../../~anassel/veeb_ja_meedia/Materials/top_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/top_right.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_left.png),url(../../../../~anassel/veeb_ja_meedia/Materials/bottom_right.png);
 	background-position: top left, top right, bottom left, bottom right;
 	background-repeat: no-repeat;
@@ -279,7 +279,21 @@ top:95px;
     animation-delay: 2.5s;
 }
 
+.anim2{
+	margin-bottom: 70px;
+	height: 500px;
+}
 
+.bird{
+	width: 80px;
+	height: 80px;
+	top: 170px;
+	left: 90px;
+	transform: scale(.6);
+	animation: bird 6s ease-in-out infinite;
+    animation-direction: alternate;
+
+}
 
 
 
@@ -301,6 +315,7 @@ footer{
     0%, 100% {transform: rotate(25deg);}
     50% {transform: rotate(-25deg);}
 }*/
+
 
 @keyframes pendulumswing {
     0% {transform: rotate(-30deg);}
@@ -333,4 +348,8 @@ footer{
 @keyframes driveback {
     0% {transform: translate(1800px, 300px) scale(-1, 1);}
     100% {transform: translate(-560px, 300px) scale(-1, 1);}
+}
+@keyframes myanimation {
+	0% {transform: translate(0px, -200px)}
+	    100% {transform: translate(0px, -40px)}
 }

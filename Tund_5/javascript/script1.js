@@ -20,7 +20,7 @@ window.onload = function() {
 function setButtons() {
     document.getElementById("nextphoto").addEventListener("click", nextPhoto);
     document.getElementById("prevphoto").addEventListener("click", prevPhoto);
-    // foto opacity siirde lõppu kuulama      transitionstart      transitionend
+    //panen foto opacity siirde lГµppu kuulama      transitionstart      transitionend
     document.getElementById("tlu_pic2").addEventListener("transitionend", enableButtons);
     document.getElementById("anim_btn").addEventListener("click", toggleAnim);
     document.getElementById("stage").addEventListener("animationstart", animInfo);
@@ -122,12 +122,15 @@ function animInfo(e) {
             if(e.animationName == "drive"){
 
                 e.target.style.animationName = "driveback";
-                
+
             } else {
                 e.target.style.animationName = "drive";
             }
         }
- }
-
-
-  
+    }   if(e.target.id == "bird"){
+            let animdelay = 1.5;
+            let animduration = 3 + Math.round(Math.random() * 1.3);
+            e.target.style.animationDuration = animduration + "s";
+            e.target.style.animationDelay = animdelay + "s";
+    }
+}
