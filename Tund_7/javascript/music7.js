@@ -1,4 +1,5 @@
 let music_url = "../../../~rinde/media/sounds/Funkytown.mp3";
+let music_player = new Audio();
 function prepare_audio() {
     music_player.addEventListener("canplay", show_info);
     music_player.addEventListener("canplaythrough", can_start);
