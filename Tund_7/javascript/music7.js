@@ -1,6 +1,4 @@
 let music_url = "../../../~rinde/media/sounds/Funkytown.mp3";
-let music_player = new Audio();
-
 function prepare_audio() {
     music_player.addEventListener("canplay", show_info);
     music_player.addEventListener("canplaythrough", can_start);
@@ -37,9 +35,9 @@ function set_music_speed(e) {
 }
 
 function can_start() {
-    //console.log("Saab lГµpuni!");
+    //console.log("Saab lõpuni!");
     music_player.removeEventListener("canplaythrough", can_start);
-    document.getElementById("music_btn").innerHTML = "MГ¤ngi muusikat!";
+    document.getElementById("music_btn").innerHTML = "Mängi muusikat!";
     document.getElementById("music_btn").addEventListener("click", toggle_music_play);
 }
 
@@ -49,6 +47,6 @@ function toggle_music_play() {
         document.getElementById("music_btn").innerHTML = "Peata muusika!";
     } else {
         music_player.pause();
-        document.getElementById("music_btn").innerHTML = "MГ¤ngi muusikat!";
+        document.getElementById("music_btn").innerHTML = "Mängi muusikat!";
     }
 }

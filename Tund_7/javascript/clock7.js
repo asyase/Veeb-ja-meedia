@@ -1,11 +1,13 @@
 let sound_url = "../../../~rinde/media/sounds/kellaheli/";
 let clock_speaker = new Audio();
+let time_words = [];
+let bell = new Audio();
 
-
-function init_clock(){
-  clockTick();
-  document.getElementById('clock_speak_btn').addEventListener("click", tell_time);
-  bell.src = sound_url + "kell.mp3";
+function init_clock() {
+    document.getElementById("clock_speak_btn").addEventListener("click", tell_time);
+    bell.src = sound_url + "kell.mp3";
+    prev_hour = new Date().getHours();
+    clockTick();
 }
 
 function clockTick() {
@@ -19,12 +21,11 @@ function clockTick() {
     document.getElementById("secondhand").style.transform = "rotate(" + secAngle + "deg)";
     document.getElementById("minutehand").style.transform = "rotate(" + minAngle + "deg)";
     document.getElementById("hourhand").style.transform = "rotate(" + hourAngle + "deg)";
-    //kas luua kella?
-    //kavalam on kontrollida, kas
-    //document.getElementById("allow_bell_btn").checked ja tundide arv erineb eelmise tsükli tundidest
-        //ehk currentHour != prev_hour
-        //if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){}
-            //loendur, mitu korda vaja luuja
+    //kas lГјГјa kella?
+    //kavalam on kontrollida, kas document.getElementById("allow_bell_btn").checked ja tundide arv erineb eelmise tsГјkli tundidest
+    //ehk currentHour != prev_hour
+    //if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){}
+        //loendur, mitu korda vaja lГјГјa
     // setTimeout(1000,clockTick);
     requestAnimationFrame(clockTick);
 }
