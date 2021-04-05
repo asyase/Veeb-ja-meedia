@@ -5,9 +5,13 @@
       <meta charset="utf-8">
       <link rel="stylesheet" type="text/css" href="styles/style.css">
 
+
       <script src="javascript/script1.js" defer></script>
       <script src="javascript/music7.js" defer></script>
       <script src="javascript/clock7.js" defer></script>
+      <script src="javascript/alarm7.js" defer></script>
+
+
 
 
   </head>
@@ -24,15 +28,23 @@
                   <li><a href="#hobi">Minu hobi</a></li>
                   <li><a href="#animatsioon">Animatsioon</a></li>
                   <li><a href="https://www.tlu.ee">Tallinna Ülikool</a></li>
-
+                  <li><a href="#music">Muusika</a></li>
+                  <li><a href="#animated_clock">Kell</a></li>
+                  <li><a href="#alarm">Äratuskell</a></li>
                   </ul>
           </nav>
+
+
          <!--veebi pohiosa, veebilehe sisu-->   <!--<aside>pisikuste lisa markuse jaoks-->
+
           <header>
               <h1>Veeb- ja meediaelemendid</h1>
               <p>See veebileht on loodud õppetöö raames ja ei sisalda mõistlikku sisu!</p>
               <p id="open_message">Pole miskit sõnumit</p>
           </header>
+
+          <!---------------------------------------------------------------------------------------------------------------------------->
+
           <section id = tlu>
             <hr>
               <h2>TLÜ</h2>
@@ -54,10 +66,12 @@
                 <p><strong>2015 </strong>Alustavad reformijärgselt tööd kuus instituuti - <a href="https://www.tlu.ee/bfm">Balti filmi, meedia, kunstide ja kommunikatsiooni instituut</a>, <a href="https://www.tlu.ee/dt">digitehnoloogiate instituut</a>, <a href="https://www.tlu.ee/hti">haridusteaduste instituut</a>, <a href="https://www.tlu.ee/ht">humanitaarteaduste instituut</a>, <a href="https://www.tlu.ee/lti">loodus- ja terviseteaduste instituut</a> ning <a href="https://www.tlu.ee/yti">ühiskonnateaduste instituut</a>.</p>
                 </div>
               </hr>
-
           </section>
-          <section id="intro">
 
+          <!---------------------------------------------------------------------------------------------------------------------------->
+
+
+          <section id="intro">
             <hr>
               <div class="introintro">
               <h2>Veebis saab kasutada</h2> <!--jarjestatud list--> <!--<ul> tapploend-->
@@ -82,6 +96,10 @@
              </hr>
 
               </section>
+
+                <!---------------------------------------------------------------------------------------------------------------------------->
+
+
                <section id="gaudeamus">
                  <hr>
                <h2>Gaudeamus</h2>
@@ -131,6 +149,8 @@
         </hr>
       </section>
 
+  <!---------------------------------------------------------------------------------------------------------------------------->
+
   <section id="media">
           <hr>
           <h2>Meedia elemendid veebis</h2>
@@ -176,6 +196,9 @@
             </hr>
           </section>
 
+
+  <!---------------------------------------------------------------------------------------------------------------------------->
+
           <section id="hobi">
             <div class="hobihobi">
 
@@ -210,7 +233,7 @@
                           </figure>
                           <h3>Lugu, mille järgi meile tehti koreograafiat suvelaagris</h3>
                           <audio controls preload="none">
-                              <source src="../../../~anassel/veeb_ja_meedia/Materials/S1mba feat. DTG-Rover -feat. DTG--kissvk.com.mp3";
+                              <source src="../../../~anassel/veeb_ja_meedia/Materials/koreo.mp3";
                               type="audio/mp3">
                           </audio>
                           <h3>Maailmatasemel treenerid Alisa Tsitseronova ja Joseph Tsosh, kes andsid tantsuklassi suvelaagris</h3>
@@ -220,9 +243,14 @@
 
                           <h3>Video TalTech Cheerleaders Eesti võistlustlel</h3>
                           <iframe width="560" height="315" src="https://www.youtube.com/embed/FBF3KrgSrXE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+                        </div>
                       </hr>
-          </section>
+
+                    </section>
+
+            <!---------------------------------------------------------------------------------------------------------------------------->
+
+
   <section id="animated_clock" class="animated_clock">
           <hr>
           <h2>Ajanäitaja ehk kell</h2>
@@ -245,7 +273,38 @@
         </hr>
       </section>
 
+        <!---------------------------------------------------------------------------------------------------------------------------->
+        <section id="alarm" class="alarm">
+          <hr>
+        				<div id='main-container'>
+        					<h2> Äratuskell </h2>
+        				</div>
+        				<div id='set_alarm'>
+        					<h3 id='alarm_txt'></h3>
+        						<label for="alarmhrs">Vali tunnid: </label>
+        							<select id='alarmhrs'></select>
+        						<label for="alarmmins">Vali minutid: </label>
+        							<select id='alarmmins'></select>
+        						<label for="alarmsecs">Vali sekundid: </label>
+        							<select id='alarmsecs'></select>
+        				</div>
+
+        				<div id='alarm_buttons'>
+
+        					<div>
+        						<button  id='set_btn' onClick='setAlarm()'>ON</button>
+        					</div>
+
+        					<div>
+        						<button  id='reset_btn' onClick='resetAlarm()'>OFF</button>
+        					</div>
+        				</div>
+                </hr>
+        			</section>
+          <!---------------------------------------------------------------------------------------------------------------------------->
+
       <section id="music">
+          <hr>
         <h2> Muusika </h2>
         <button type="button" id ="music_btn">Oota!</button>
         <br>
@@ -256,12 +315,10 @@
                 <input type="range" id="music_vol_btn" min="0" max="1" value="0.7" step="0.01">
                 <label for="music_speed_btn">Esituskiirus</label>
                     <input type="range" id="music_speed_btn" min="0.2" max="5" value="1" step="0.01">
+                  </hr>
+                  </section>
 
-
-
-      </section>
-
-
+  <!---------------------------------------------------------------------------------------------------------------------------->
 
           <section id="animatsioon">
             <hr>
@@ -310,9 +367,7 @@
 
 <button id="anim_btn">Käivita animatsioon</button>
           <hr>
-
-
-              </section>
+        </section>
 
 
               <footer>

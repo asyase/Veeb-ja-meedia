@@ -21,14 +21,41 @@ function clockTick() {
     document.getElementById("secondhand").style.transform = "rotate(" + secAngle + "deg)";
     document.getElementById("minutehand").style.transform = "rotate(" + minAngle + "deg)";
     document.getElementById("hourhand").style.transform = "rotate(" + hourAngle + "deg)";
+    // Kas lГјГјa kella?
+    // if (currentMinutes == 00 && currentSeconds == 0 && currentTime.getMilliseconds() < 1000 / 60 && document.getElementById("allow_bell_btn").checked) { // <-- Testimiseks
+    if (document.getElementById("allow_bell_btn").checked && currentHour != prevHour) {
+        // loendur, mitu korda vaja lГјГјa
+        let tollCount = 0;
+        let count = 0;
+        if(currentHour == 0) {
+            tollCount = 12;
+        } else if (currentHour > 0 && currentHour < 13) {
+            tollCount = currentHour;
+        } else {
+            tollCount = currentHour - 12;
+        }
+
+        bell.play();
+        count++;
+        bell.onended = function() {
+            if (count < tollCount) {
+                bell.play();
+                count++;
+            }
+        }
+
+        prevHour = currentHour;
+    }
+    // setTimeout(1000, clockTick); <-- iga sekundi jГ¤rel (sekund on ebasobimatu ajaГјhik, setTimeout ei saa hakkama (aeg-ajalt lГ¤heb +1 millisekund))
+    requestAnimationFrame(clockTick); // teist akent vaadates jГ¤Г¤b seisma
+}
     //kas lГјГјa kella?
     //kavalam on kontrollida, kas document.getElementById("allow_bell_btn").checked ja tundide arv erineb eelmise tsГјkli tundidest
     //ehk currentHour != prev_hour
     //if(currentMinute == 0 && currentSecond == 0 && currentTime.getMilliseconds() < 1000/60 && document.getElementById("allow_bell_btn").checked){}
         //loendur, mitu korda vaja lГјГјa
     // setTimeout(1000,clockTick);
-    requestAnimationFrame(clockTick);
-}
+
 
 function tell_time() {
     time_words.push("kellon");
