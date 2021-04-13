@@ -11,6 +11,8 @@ function init_draw() {
 
   }
 
+
+
 function draw_pacman(){
   ctx.beginPath();
       ctx.arc(800, 110, 100, .1 * Math.PI, 1.9 * Math.PI);
