@@ -1,44 +1,27 @@
 let degree = 0;
 let z_degree = 30;
-let toggle = 0;
+let switching = 0;
 let percent = 301;
 let up = true;
 
 window.onload = function() {
-    rotate_cube();
+    cube_rotating();
 }
 
-function rotate_cube() {
-    let cube = document.getElementById("cube");
-    if (degree == 362) {
-        degree = 0;
-        toggle += 1;
-        if (toggle > 2) {
-            toggle = 0;
-        }
-    }
 
-    if (percent >= 700) {
-        up = false;
-    }
-    if (percent <= 0) {
-        up = true;
-    }
-    document.getElementById("area").style.perspectiveOrigin = "0%" + (percent - 371) + "%";
-    if (up) {
-        percent += 1;
+function image_switching (target, side) {
+    if (switching == 0) {
+        target.src = "../../../~anassel/veeb_ja_meedia/Materials/piccube_" + side + ".png";
+    } else if (switching == 1) {
+        target.src = "../../../~anassel/veeb_ja_meedia/Materials/cube_" + side + ".png";
     } else {
-        percent -= 1;
+        target.src = "../../../~anassel/veeb_ja_meedia/Materials/piccube_" + side + ".png";
     }
-    cube.style.transform = "rotateZ(" + z_degree + "deg) rotateY(" + degree + "deg)";
-    degree += 2;
-    if (degree % 90 == 0) {
-        change_image(degree / 90);
-    }
-    requestAnimationFrame(rotate_cube);
 }
 
-function change_image(side) {
+//---------------------------------------------------------------------------------------------------//
+
+function image_changing(side) {
     let image;
     if (side == 1) {
         image = document.getElementById("front").getElementsByTagName("img")[0];
@@ -49,21 +32,38 @@ function change_image(side) {
     } else {
         image = document.getElementById("left").getElementsByTagName("img")[0];
     }
-    toggle_img(image, side);
+    image_switching(image, side);
 }
 
-function random_number(min, max) {
-    min = 1;
-    max = 7;
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
-function toggle_img(target, side) {
-    if (toggle == 0) {
-        target.src = "../../../~anassel/veeb_ja_meedia/Materials/cube_"+ random_number() + ".jpeg";
-    } else if (toggle == 1) {
-        target.src = "../../../~anassel/veeb_ja_meedia/Materials/cube_" + random_number() + ".jpeg";
-    } else {
-        target.src = "../../../~anassel/veeb_ja_meedia/Materials/cube_" + random_number() + ".jpeg";
+//-----------------------------------------------------------------------------------------------//
+
+function cube_rotating() {
+    let cube = document.getElementById("cube");
+    if (degree == 360) {
+        degree = 0;
+        switching += 1;
+        if (switching > 2) {
+            switching = 0;
+        }
     }
+
+    if (percent >= 700) {
+        up = false;
+    }
+    if (percent <= 0) {
+        up = true;
+    }
+    document.getElementById("area").style.perspectiveOrigin = "0%" + (percent - 260) + "%";
+    if (up) {
+        percent += 1;
+    } else {
+        percent -= 1;
+    }
+    cube.style.transform = "rotateZ(" + z_degree + "deg) rotateY(" + degree + "deg)";
+    degree += 2;
+    if (degree % 90 == 0) {
+        image_changing(degree / 90);
+    }
+    requestAnimationFrame(cube_rotating);
 }
