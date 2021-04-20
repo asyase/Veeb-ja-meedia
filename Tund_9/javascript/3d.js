@@ -1,8 +1,9 @@
-let degree = 0;
-let z_degree = 30;
-let switching = 0;
 let percent = 301;
 let up = true;
+let degree = 0;
+let degree_z = 30;
+let switching = 0;
+
 
 window.onload = function() {
     cube_rotating();
@@ -60,7 +61,7 @@ function cube_rotating() {
     } else {
         percent -= 1;
     }
-    cube.style.transform = "rotateZ(" + z_degree + "deg) rotateY(" + degree + "deg)";
+    cube.style.transform = "rotateZ(" + degree_z + "deg) rotateY(" + degree + "deg)";
     degree += 2;
     if (degree % 90 == 0) {
         image_changing(degree / 90);
