@@ -1,0 +1,131 @@
+body {
+  background-color: rgb(230, 204, 255);
+  font-family: verdana, sans-serif;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+main {
+  margin: 20px;
+  width: 80%;
+
+  /*peatukkide loendur*/
+/*  counter-reset: chapter-counter;*/
+
+}
+
+h2 {
+  counter-increment: chapter-counter;
+
+}
+
+
+h3 {
+    counter-increment: subchapter;
+}
+
+
+/*otsene sisaldumine*/
+section>img {
+  border: 4px solid #4B0082
+  counter-reset: subchapter;
+}
+
+
+
+/*jargnevus*/
+figure+p, figure+p+p {
+  color: 	#800000;
+}
+
+h3 + p + figure img {
+  border: 4px solid #2f96b6;
+      border-radius: 10px;
+  }
+
+  /* koik, mis jargnevad*/
+
+  h3 ~ p {
+      text-indent: 1cm;
+  }
+
+/*atribuutide jargi*/
+[title] {
+  background-color: white;
+}
+
+/*tapne vaartus*/
+[title="selgitus"] {
+    font-weight: bold;
+}
+
+/*sisaldab fraas *= loppeb fraasiga $=    */
+
+/* vaartus algab kindla fraasiga */
+
+[id^="chapter"] {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+:lang (en) {
+  font-style: oblique;
+}
+
+/* a: link */
+/* a: hover */
+/* a: visited */
+/* a: active */
+
+
+section:target {
+    background-color: #ffffaa;
+}
+
+/**jarjakorra lausel**/
+
+p:first-child  {   /*esimene tutarelemnt td*/
+  font-weight: 900;
+  font-style: oblique;
+}
+
+/* :last-child   :first-of-type   :last-of-type   :last-child */
+
+section {
+    border: 5px solid green
+     counter-reset: subchapter;
+}
+
+section:first-of-type {
+    border-radius: 20px 20px 0px 0px;
+}
+
+section:last-of-type {
+    border-radius: 0px 0px 20px 20px;
+
+}
+
+section:nth-of-type(2) {
+    background-color: #fafafa;
+}
+
+section:nth-of-type(even) {
+    border-style: dotted;
+}
+
+h2::before {
+    content: url("../../../~rinde/media/bullet/tlu_bullet.png") " Peatukk " counter(chapter-counter) " " open-quote;
+}
+
+section:first-of-type h2::before {
+    content: url("../../../~rinde/media/bullet/tlu_bullet.png") " " open-quote;
+}
+
+
+h3::before {
+    content: "Alapeatukk " counter(chapter-counter) "." counter(subchapter) " " open-quote;
+}
+
+h2::after, h3::after {
+    content: close-quote;
+}
