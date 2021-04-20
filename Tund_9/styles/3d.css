@@ -4,10 +4,10 @@ section {
 }
 
 .area {
-    background-color: rgb(230, 204, 255);
+    background-color: rgb(180, 135, 224);
     position: absolute;
-    width: 1200px;
-    height: 800px;
+    width: 1150px;
+    height: 720px;
     margin: auto;
     perspective: 5000px;
     perspective-origin: 0% -30%;
