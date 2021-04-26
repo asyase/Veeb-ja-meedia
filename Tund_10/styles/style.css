@@ -81,6 +81,61 @@ h2 {
     padding-bottom: 2px;
 }
 
+h2::after{
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: #0E7359;
+    background: linear-gradient(to left, transparent 0%, #8a05e3 80%, transparent 90%);
+}
+
+a:link, a:visited {
+    color:#660000;
+}
+
+a:hover, a:active {
+    color: #b37be8;
+}
+
+section:nth-of-type(1) {
+	background-color: #f8e5eb;
+	counter-reset: chapter-counter;
+}
+
+section:target {
+	background-color: #b4d9bc;
+}
+
+
+[id^="media"] {
+    border: 5px double #660000;
+    border-radius: 25px;
+}
+
+[id^="intro"] {
+    border: 5px double #660000;
+    border-radius: 25px;
+}
+
+[id^="music"] {
+    border: 5px double #660000;
+    border-radius: 25px;
+}
+
+
+[id^="graphics"] {
+    border-radius: 25px;
+    border: 5px double #660000;
+}
+
+[id^="animated_clock"] {
+    border-radius: 25px;
+    border: 5px double #660000;
+}
+
 
 section #graphics{
 
@@ -97,6 +152,7 @@ section #graphics{
   min-height: 360px;
   max-height: 950px;
   overflow: auto;
+  border: 3px solid #450087;
 
 
 }
@@ -168,6 +224,11 @@ list-style: square;
 .hobihobi a:visited {color: #630000; background: none; font-weight: normal}
 .hobihobi a:hover {color:black; background-color: rgb (230, 204, 255); font-weight: bold}
 .hobihobi a:active {color:white; background: none; font-weight: bold}
+
+
+
+
+
 
 h1:hover {
 	color: rgb(157, 66, 173);
