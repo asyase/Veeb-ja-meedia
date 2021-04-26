@@ -89,7 +89,7 @@ h2::after{
     height: 1px;
     width: 100%;
     background: #0E7359;
-    background: linear-gradient(to left, transparent 0%, #8a05e3 80%, transparent 90%);
+    background: linear-gradient(to left, transparent 0%, #8a05e3 90%, transparent 90%);
 }
 
 a:link, a:visited {
