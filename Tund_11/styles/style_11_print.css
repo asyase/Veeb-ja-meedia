@@ -1,0 +1,117 @@
+body {
+    margin: 3cm;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+
+nav, video, audio {
+  display: none;
+}
+
+.stage{
+	width: 1800px;
+	height: 600px;
+	position: relative;
+	left: -20px;
+	top: 0px;
+	background-image: url(../..//Materials/Brorfelde_landscape_2_maa_osa_veerand.png), url(../../Materials/Brorfelde_landscape_2_taeva_osa_veerand.png);
+    background-repeat: no-repeat;
+	background-size: 1250px;
+    overflow: hidden;
+    /*margin-bottom: 85px;*/
+}
+.stage *, .photoplace * {
+	position: absolute;
+}
+.windmill {
+    width: 308px;
+    height: 360px;
+    /* border: 1px solid teal; */
+    top: -20px;
+    left: 900px;
+    transform: scale(.3);
+}
+.wm_body{
+	bottom: 0px;
+}
+.wm_wing{
+	animation: spin 4s linear infinite;
+}
+.sun {
+    width: 330px;
+    height: 360px;
+    top: -85px;
+    left: -80px;
+    transform: scale(.7);
+}
+
+.truckarea {
+    top:-50px;
+    left: -30px;
+	width: 190px;
+	height: 100px;
+	animation: drive 10s linear both paused;
+}
+
+.truck {
+    top:230px;
+    left: 30px;
+    transform-origin: left top;
+    transform: scale(.2);
+}
+.truck_body{
+	bottom: -100px;
+	left: -85px;
+}
+
+.truck_wheel {
+	bottom: -45px;
+	animation: spin 1s linear infinite;
+}
+
+.wheel2{
+    bottom: -140px;
+    left: 720px;
+}
+.wheel1{
+	bottom: -140px;
+	left: 2px;
+}
+.helicopter{
+    left: 300px;
+    top:70px;
+    transform: scale(.2);
+}
+.helicopter_body{
+	bottom: 0px;
+	/*left: -90px;*/
+}
+
+.back_rotor{
+    top: -165px;
+    left: 340px;
+}
+.rotor{
+    top:-175px;
+    bottom: -130px;
+    left: -38px;
+
+}
+
+.smoke {
+    top: 355px;
+    left: 78px;
+    animation: smoking 3s ease-out infinite;
+}
+
+.bird{
+	width: 80px;
+	height: 80px;
+	top: 170px;
+	left: 90px;
+	transform: scale(.6);
+	animation: bird 6s ease-in-out infinite;
+    animation-direction: alternate;
+
+}
