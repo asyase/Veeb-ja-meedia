@@ -1,0 +1,267 @@
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust:     100%;
+}
+
+body {
+	margin: 0;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+.dance{
+    width: 50%; /* Ширина */
+    float: center; /* Выстраиваем элементы по горизонтали */
+    margin:auto; /* Отступ слева */
+    background: #f0f0f0; /* Цвет фона */
+    border-radius: 5px; /* Радиус скругления */
+    padding: 2%; /* Поля */
+   }
+   .dance:first-child {
+    margin-left: 0; /* Убираем отступ для первого элемента */
+   }
+
+
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	font-family: myMontserrat2, sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+
+
+
+/* Promo sektsioon */
+
+.cssgrid{
+  background:#FFF6E5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1.25rem;
+
+
+}
+
+.logo,
+.site-title {
+  display: grid;
+ grid: repeat(3, auto) / repeat(2, auto);
+background-color: #FFAAAA;
+	text-align: center;
+
+}
+
+.logo {
+
+	font-size: 6em;
+
+
+}
+
+.site-title {
+	margin-top: -1em;
+	margin-bottom: 3em;
+}
+
+/* Splash sektsioon */
+
+.splash {
+	background: #FFF6E5;
+	padding-bottom: 2em;
+}
+
+.splash-content {
+	padding: 1.5em;
+}
+
+@media screen and (min-width: 600px) {
+	.splash-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+
+	.splash-text p {
+		padding-top: 0;
+	}
+}
+
+/* Buckets sektsioonid */
+
+.buckets {
+	padding: 2em 1em 1em;
+	background: #3E454C;
+}
+
+.buckets ul {
+	margin: 0;
+	padding: 0;
+}
+
+.buckets li {
+	margin-bottom: 1em;
+	background: white;
+	list-style-type: none;
+}
+
+.bucket {
+	padding: 1.5em;
+}
+
+
+
+.more {
+	padding: 2em;
+}
+
+/* Twins sektsioon */
+
+.twin {
+	padding: 2em;
+	background: #2185C5;
+	color: white;
+}
+
+.twin:last-of-type {
+	background: #FF7F66;
+}
+
+/* Colophon sektsioon */
+.colophon {
+	padding: 2em;
+	background: hsl(0, 0%, 10%);
+	color: white;
+	text-align: center;
+}
+
+.colophon a {
+	color: white;
+}
+
+.colophon a:hover,
+.colophon a:focus {
+	border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------------------
+Kui ei toeta grid
+--------------------------------------------------------------*/
+@supports not (display: grid) {
+	.grid {
+		max-width: 50em;
+		margin: 0 auto;
+	}
+}
+
+/*--------------------------------------------------------------
+
+Flex, et teha kolme ämbriga paigutus
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 700px) {
+	@supports (display: flex) {
+
+		.buckets ul {
+			display: flex;
+			justify-content: space-around;
+		}
+
+		.buckets li {
+			width: 31%;
+		}
+
+	}
+}
+
+/*--------------------------------------------------------------
+Grid wide ekraaniks, millal brausertoeta grid
+
+--------------------------------------------------------------*/
+
+@media screen and (min-width: 600px) {
+	/* Layout with CSS Grid */
+	@supports (display: grid) {
+
+		/* Four-column layout. Two center columns have a total max width of 50em: */
+		.grid {
+
+			display: grid;
+			grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+		}
+
+		/*Keskendan üksused, asetades need kahte keskveergu: */
+		.splash-content,
+		.more-content,
+		.buckets ul {
+			grid-column: 2/4;
+		}
+
+		/* Kasutan automaatset ruudustiku paigutust + vahemikku, et iga üksus ulatuks kahte veergu:*/
+		.twin,
+		.colophon aside {
+			grid-column: span 2;
+		}
+
+	}
+}
+
+
+@font-face {
+	font-family: myMontserrat2;
+	src: url("Montserrat-Medium.ttf") format("truetype");
+
+}
