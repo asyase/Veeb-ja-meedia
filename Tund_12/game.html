@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="et">
+    <head>
+        <title>Anastasija teeb veebi</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="#">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="styles/game.css">
+        <script src="javascript/game.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <header>
+                <h1>Veeb ja meedia elemendid</h1>
+                <p>See veebileht on loodud õppetöö raames ja ei sisalda mõistlikku sisu!</p>
+                <p id="open_message">Pole miskit sõnumit.</p>
+            </header>
+            <section id="graphics">
+                <h2>Anastasija mäng</h2>
+                <canvas id="canvas" width="960" height="540">Kahjuks Teie brauser ei toeta HTML5 canvas elementi!</canvas>
+      <div id="results">
+        <div id="timeClock">
+
+            <input type="checkbox" id="musicCheck" onchange="check_background_music()"> Taustamuusika välja lülitamine<br>
+          <span id="timeText">Aeg: </span><span id="time">00:00</span>
+        </div>
+        <div id="correct">Õigeid: 0</div>
+        <div id="wrong">Valesid: 0</div>
+        <div id="missed">Mööda: 0</div>
+        <div id="score">Punktid: 0</div>
+      </div>
+
+            </section>
+            <footer>
+                <p>Leht lõpeb siin!</p>
+            </footer>
+        </main>
+    </body>
+</html>
