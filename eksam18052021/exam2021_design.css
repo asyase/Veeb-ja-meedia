@@ -1,0 +1,132 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+
+.main-grid{
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 200px auto 200px;
+	grid-template-rows: 180px auto 180px;
+}
+
+.grid-item{
+  padding: 10px;
+	overflow: hidden;
+	background-color: #FFC0CB;
+	box-shadow: inset 0 0 15px white;
+	border-width: 5px;
+	border-style: solid;
+	border-color: white;
+    border-radius: 40px 0px 40px 0px;
+}
+
+.grid-item:hover {
+	background-color: lightblue;
+	transition: all 1s ease-in-out;
+}
+
+.flexBox {
+	display: flex;
+	justify-content: center;
+}
+
+.test {
+	text-align: center;
+}
+
+.loc-top {
+	grid-column: 1/4;
+	grid-row: 1/1;
+}
+
+.loc-left {
+	grid-column: 1/1;
+	grid-row: 2/4;
+	text-align: center;
+}
+
+.loc-right {
+	grid-column: 3/3;
+	grid-row: 2/2;
+	text-align: center;
+}
+
+.loc-bottom-right {
+	grid-column: 3/3;
+	grid-row: 3/3;
+}
+
+.loc-bottom-mid {
+	grid-column: 2/3;
+	grid-row: 3/3;
+}
+
+.loc-mid {
+	grid-column: 2/3;
+	grid-row: 2/3;
+}
+
+.bad {
+	list-style-image: url("../../../~anassel/veeb_ja_meedia/Materials/bad.png");
+}
+
+.good {
+	list-style-image: url("../../../~anassel/veeb_ja_meedia/Materials/good.png");
+}
+
+ul {
+	list-style-position: inside;
+}
+
+#comp_number {
+	position:relative;
+}
+
+#comp_number img {
+	position:absolute;
+	left:0;
+	-webkit-transition: opacity 1s ease-in-out;
+	-moz-transition: opacity 1s ease-in-out;
+	-o-transition: opacity 1s ease-in-out;
+	transition: opacity 1s ease-in-out;
+}
+
+#comp_number img.top:hover {
+	opacity:0;
+}
+
+.meter {
+	position: relative;
+	width: 360px;
+	height: 180px;
+}
+
+.meter * {
+	position: absolute;
+}
+
+.pin {
+	position: absolute;
+	/*left: 154px;*/
+	transform-origin: 50% 160px;
+	transform: rotate(-74deg);
+}
+
+.vinyl {
+	animation: spin 4s linear infinite paused;
+}
+
+@keyframes spin {
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(360deg);}
+}
+
+.largemessage {
+	font-family: Verdana, sans-serif;
+	font-size: 100px;
+}
